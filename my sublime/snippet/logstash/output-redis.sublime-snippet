@@ -1,0 +1,27 @@
+<snippet>
+	<content><![CDATA[
+redis {
+	batch => false
+	#batch_events => ... # number (optional), default: 50
+	#batch_timeout => ... # number (optional), default: 5
+	#codec => ... # codec (optional), default: "plain"
+	congestion_interval => 1
+	congestion_threshold => 10
+	#data_type => ... # string, one of ["list", "channel"] (optional)
+	data_type => list
+	db => 0
+	host => [ "202.173.9.31:6400" ]
+	key => "logstash-%{type}"
+	#password => ... # password (optional)
+	#port => ... # number (optional), default: 6379
+	#reconnect_interval => ... # number (optional), default: 1
+	#shuffle_hosts => ... # boolean (optional), default: true
+	#timeout => ... # number (optional), default: 5
+	#workers => ... # number (optional), default: 1
+}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>output.redis</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>text.logstash</scope>
+</snippet>

@@ -1,0 +1,15 @@
+{
+   "scope": "source.shell",
+
+   "completions":
+   [
+		{"trigger": "datet\ttoday string", "contents": "date +%Y-%m-%d"},
+		{"trigger": "datey\tyesterday string", "contents": "date -d '-1d' +%Y-%m-%d"},
+		{"trigger": "curdir\tcurrent dir", "contents": "cur_dir=\\$(cd \"\\$(dirname \"\\$0\")\"; pwd)"},
+		{"trigger": "str.cutLeft", "contents": "\\${${1:cut_string}#*${2:cutter}}"},
+		{"trigger": "str.cutAllLeft", "contents": "\\${${1:cut_string}##*${2:cutter}}"},
+		{"trigger": "str.cutRight", "contents": "\\${${1:cut_string}%*${2:cutter}}"},
+		{"trigger": "str.cutAllRight", "contents": "\\${${1:cut_string}%%*${2:cutter}}"},
+		{"trigger": "str.subString", "contents": "\\${${1:string}:${2:start}:${3:end}}"}
+   ]
+}

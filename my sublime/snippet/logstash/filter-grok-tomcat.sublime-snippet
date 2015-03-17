@@ -1,0 +1,14 @@
+<snippet>
+	<content><![CDATA[
+grok {
+	match => {
+		"message" => "\[%{GREEDYDATA:service_name}\]\s+%{TIMESTAMP_ISO8601:timestamp}\s+\[%{DATA:thread}\]\s+%{LOGLEVEL:log_level}\s+%{JAVACLASS:class}\s+-\s+%{GREEDYDATA:content}"
+		"path" => "/home/%{USERNAME:host_user}/.*"
+	}
+}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>filter.grok.tomcat</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>text.logstash</scope>
+</snippet>

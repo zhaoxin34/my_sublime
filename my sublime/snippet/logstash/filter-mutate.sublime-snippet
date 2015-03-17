@@ -1,0 +1,25 @@
+<snippet>
+	<content><![CDATA[
+mutate {
+    #add_field => ... # hash (optional), default: {}
+    #add_tag => ... # array (optional), default: []
+    #convert => ... # hash (optional)
+    #gsub => ... # array (optional)
+    #join => ... # hash (optional)
+    #merge => ... # hash (optional)
+    #remove_field => ... # array (optional), default: []
+    #remove_tag => ... # array (optional), default: []
+    #rename => ... # hash (optional)
+    #replace => ... # hash (optional)
+    #split => ... # hash (optional)
+    #strip => ... # array (optional)
+    #update => ... # hash (optional)
+    #uppercase => ... # array (optional)
+	lowercase => [ ${1:"service_name", "host_user"} ]
+}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>filter.mutate</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>text.logstash</scope>
+</snippet>

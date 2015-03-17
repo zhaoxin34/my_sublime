@@ -1,0 +1,13 @@
+{
+   "scope": "text.logstash",
+
+   "completions":
+   [
+		{"trigger": "COMBINEDAPACHELOG"},
+		{"trigger": "codec"},
+		{"trigger": "rubydebug"},
+		{"trigger": "if.eq", "contents": "if [${1:type}] == ${2:\"nginx_log\"} {\n\t$3\n}"},
+		{"trigger": "if.noteq", "contents": "if [${1:type}] =~ ${2:\"nginx_log\"} {\n\t$3\n}"},
+		{"trigger": "if.notin", "contents": "if [${1:action}] not in ${2:tags} {\n\t${3:drop {\\}}\n}"}
+   ]
+}

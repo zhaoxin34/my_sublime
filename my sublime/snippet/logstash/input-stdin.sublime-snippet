@@ -1,0 +1,14 @@
+<snippet>
+	<content><![CDATA[
+stdin {
+	add_field => ${1:... # hash (optional), default: {\}}
+	codec => ${2:... # codec (optional), default: "plain"}
+	tags => ${3:... # array (optional)}
+	type => ${4:... # string (optional)}
+}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>input.stdin</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>text.logstash</scope>
+</snippet>

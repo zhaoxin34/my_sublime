@@ -1,0 +1,18 @@
+<snippet>
+	<content><![CDATA[
+date {
+	#add_field => ${1:... # hash (optional), default: {\}}
+	#add_tag => ${2: ... # array (optional), default: []}
+	#locale => ${3:... # string (optional)}
+	match => ${4:[ "timestamp" , "yyyy-MM-dd HH:mm:ss,SSS", "ISO8601", "UNIX" ]}
+	remove_field => ${5:[ "timestamp" ]}
+	#remove_tag => ${6:... # array (optional), default: []}
+	#target => ${7:... # string (optional), default: "@timestamp"}
+	#timezone => ${8:... # string (optional)}
+}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>filter.date</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>text.logstash</scope>
+</snippet>

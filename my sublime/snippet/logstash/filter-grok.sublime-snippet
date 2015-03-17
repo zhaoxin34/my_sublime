@@ -1,0 +1,27 @@
+<snippet>
+	<content><![CDATA[
+grok {
+	# http://grokdebug.herokuapp.com/
+	# http://grokdebug.herokuapp.com/patterns
+	#add_field => ... # hash (optional), default: {}
+	#add_tag => ... # array (optional), default: []
+	#break_on_match => true
+	#drop_if_match => false
+	#keep_empty_captures => ... # boolean (optional), default: false
+	match => {
+    	"message" => "%{COMBINEDAPACHELOG}"
+		"path" => "/home/%{USERNAME:host_user}/.*/access\.(%{GREEDYDATA:service_name}\.|)log"
+	}
+	#named_captures_only => ... # boolean (optional), default: true
+	#overwrite => ... # array (optional), default: []
+	#patterns_dir => ... # array (optional), default: []
+	#remove_field => ... # array (optional), default: []
+	#remove_tag => ... # array (optional), default: []
+	#tag_on_failure => ... # array (optional), default: ["_grokparsefailure"]
+}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>filter.grok</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>text.logstash</scope>
+</snippet>
