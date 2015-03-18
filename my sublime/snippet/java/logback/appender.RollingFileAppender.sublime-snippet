@@ -1,0 +1,26 @@
+<snippet>
+	<content><![CDATA[
+<appender name="rollingFile"
+	class="ch.qos.logback.core.rolling.RollingFileAppender">
+	<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+		<FileNamePattern>
+			${1:\${WORKSPACE\}/log/sm-%d{yyyy-MM-dd\}.log}
+		</FileNamePattern>
+		 <MaxHistory>${2:30}</MaxHistory>
+	</rollingPolicy>
+	<layout class="ch.qos.logback.classic.PatternLayout">
+		<pattern>
+			${3:[rtb-admin] %date [%thread] %-5level %logger{80\} - %msg%n}
+		</pattern>
+	</layout>
+	<triggeringPolicy class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">
+     <MaxFileSize>${4:10MB}</MaxFileSize>
+   </triggeringPolicy>
+</appender>
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>appender.rollingFile</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>text.xml.logback</scope>
+	<description>RollingFileAppender</description>
+</snippet>

@@ -1,0 +1,16 @@
+{
+    "name": "Logback",
+    "scopeName": "text.xml.logback",
+    "fileTypes": [
+        "logback.xml"
+    ],
+    "patterns": [
+        {"include":"text.xml"},    
+        {
+            "match": "^(input|filter|codec|output)",
+            "name": "entity.name.type.class.logstash",
+            "comment": "classes: inputs, codecs, filters and outputs"
+        }
+    ],
+    "uuid": "494d3fcd-e283-4a31-86b2-4298954bf23a"
+}

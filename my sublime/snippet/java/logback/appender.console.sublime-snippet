@@ -1,0 +1,16 @@
+<snippet>
+	<content><![CDATA[
+<appender name="stdout" class="ch.qos.logback.core.ConsoleAppender">
+	<encoder>
+		<pattern>
+			${1:pattern}
+		</pattern>
+	</encoder>
+</appender>
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>appender.stdout</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>text.xml.logback</scope>
+	<description>ConsoleAppender</description>
+</snippet>

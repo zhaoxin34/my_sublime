@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>fileTypes</key>
+	<array>
+		<string>logback.xml</string>
+	</array>
+	<key>name</key>
+	<string>Logback</string>
+	<key>patterns</key>
+	<array>
+		<dict>
+			<key>include</key>
+			<string>text.xml</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>classes: inputs, codecs, filters and outputs</string>
+			<key>match</key>
+			<string>^(input|filter|codec|output)</string>
+			<key>name</key>
+			<string>entity.name.type.class.logstash</string>
+		</dict>
+	</array>
+	<key>scopeName</key>
+	<string>text.xml.logback</string>
+	<key>uuid</key>
+	<string>494d3fcd-e283-4a31-86b2-4298954bf23a</string>
+</dict>
+</plist>

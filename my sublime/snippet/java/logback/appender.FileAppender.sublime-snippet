@@ -1,0 +1,15 @@
+<snippet>
+	<content><![CDATA[
+<appender name="FILE" class="ch.qos.logback.core.FileAppender">
+	<file>${1:/opt/id/myApp.log}</file>
+	<encoder>
+		<pattern>${2:%date %level [%thread] %logger{10\} [%file : %line] %msg%n}</pattern>
+	</encoder>
+</appender>
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>appender.fileAppender</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>text.xml.logback</scope>
+	<description>FileAppender</description>
+</snippet>

@@ -1,0 +1,11 @@
+<snippet>
+	<content><![CDATA[
+<!--Example: <pattern>%d %contextName [%t] %level %logger{36} - %msg%n</pattern>  -->
+<contextName>${1:myAppName}</contextName>
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>contextName</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>text.xml.logback</scope>
+	<description>contextName</description>
+</snippet>

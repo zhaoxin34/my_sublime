@@ -1,0 +1,12 @@
+<snippet>
+	<content><![CDATA[
+<logger name="${1:cn.knet.cp.rtb.sm.client}" level="${2:debug}" additivity="false">
+    <appender-ref ref="${3:smfile}" />
+</logger>
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>logger</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>text.xml.logback</scope>
+	<description>logger</description>
+</snippet>

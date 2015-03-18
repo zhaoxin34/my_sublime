@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>pattern.standard</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>text.xml.logback</scope>
+	<description>standard pattern</description>
+</snippet>

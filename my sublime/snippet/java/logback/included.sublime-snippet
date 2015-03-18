@@ -1,0 +1,17 @@
+<snippet>
+	<content><![CDATA[
+<!-- the target included file -->
+<included>
+	${1:<appender name="includedConsole" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<pattern>"%d - %m%n"</pattern>
+		</encoder>
+	</appender>}
+</included>
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>included</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>text.xml.logback</scope>
+	<description>target included file</description>
+</snippet>
