@@ -1,0 +1,45 @@
+<snippet>
+	<content><![CDATA[
+  if [type] == "nginx_log" {
+	if [path] =~ "access" {
+		grok {
+		    match => {
+		        "message" => "%{COMBINEDAPACHELOG}"
+		   		"path" => "/home/%{USERNAME:host_user}/.*/access\.(%{GREEDYDATA:service_name}\.|)log"
+			}
+		    break_on_match => false
+		}
+		mutate {
+			remove_field => "message"
+		}
+		date {
+			match => [ "timestamp" , "dd/MMM/yyyy:HH:mm:ss Z" ]
+		}
+		if [agent] != "-" and [agent] != "" { 
+		    useragent { 
+				add_tag => [ "UA" ] 
+				source => "agent" 
+				prefix => "ua_"
+		    } 
+		} 
+		if "UA" in [tags] { 
+			if [ua_device] == "Other" { mutate { remove_field => "ua_device" } } 
+			if [ua_name]   == "Other" { mutate { remove_field => "ua_name" } } 
+			if [ua_os]     == "Other" { mutate { remove_field => "ua_os" } } 
+			if [ua_os_name]     == "Other" { mutate { remove_field => "ua_os_name" } } 
+			mutate { 
+				remove_field => [  "ua_minor", "ua_patch", "ua_os"] 
+			}
+		} 
+	} else if [path] =~ "error" {
+		mutate { replace => { type => "nginx_error" } }
+	} else {
+		mutate { replace => { type => "nginx_unknow" } }
+	}
+ }
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>filter.nginx</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>text.logstash</scope>
+</snippet>

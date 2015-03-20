@@ -1,8 +1,6 @@
 <snippet>
 	<content><![CDATA[
-output {
-  stdout { codec => rubydebug }
-}
+stdout { codec => rubydebug }
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
 	<tabTrigger>output.stdout</tabTrigger>

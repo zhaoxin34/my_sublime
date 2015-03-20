@@ -1,0 +1,17 @@
+<snippet>
+	<content><![CDATA[
+<snippet>
+	<content><![CDATA[
+${2:snippet content}
+]]${1:}></content>
+	<tabTrigger>${3:trigger}</tabTrigger>
+	<scope>${4:text.xml}</scope>
+	<description>${5:description}</description>
+</snippet>
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>snippet</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>text.xml</scope>
+	<description>root logger</description>
+</snippet>

@@ -4,8 +4,11 @@
 	],
 	"installed_packages":
 	[
+		"AAAPackageDev",
 		"Emmet",
+		"GenerateUUID",
 		"Logstash Syntax Highlighting",
+		"Nodejs",
 		"Package Control",
 		"ScopeHunter",
 		"WordHighlight"
